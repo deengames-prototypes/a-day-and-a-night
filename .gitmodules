@@ -1,3 +1,6 @@
 [submodule "Scripts/vx-ace-api"]
 	path = Scripts/vx-ace-api
 	url = git@github.com:ashes999/vx-ace-api.git
+[submodule "api"]
+	path = Scripts/vx-ace-api
+	url = git@github.com:ashes999/vx-ace-api.git

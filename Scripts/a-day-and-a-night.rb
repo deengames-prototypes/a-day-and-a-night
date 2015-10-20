@@ -1,2 +1,3 @@
 #!/env/rb
-require 'Scripts/vx-api/vx_ace_api'
+API_ROOT = 'Scripts/vx-ace-api'
+require 'Scripts/vx-ace-api/vx_ace_api'
