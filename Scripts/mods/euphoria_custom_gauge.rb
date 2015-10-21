@@ -50,7 +50,7 @@ module Euphoria
      
     GAUGE_START     = 0          #Set The Amount The Gauge Starts At
      
-    GAUGE_MAX       = 250        #Set The Gauges Max Value
+    GAUGE_MAX       = 999        #Set The Gauges Max Value
      
     GAUGE_COLOR1    = 9          #Set The Gauges Left Side Color (1-32)
      
@@ -60,11 +60,11 @@ module Euphoria
      
     GAUGE_ON_MAP    = true       #Show Gauge On Map? True of False
      
-    GAUGE_MAP_X     = 0          #Set Gauges X Coordinate On Map
+    GAUGE_MAP_X     = 2          #Set Gauges X Coordinate On Map
      
-    GAUGE_MAP_Y     = 25          #Set Gauges Y Coordinate On Map
+    GAUGE_MAP_Y     = 2          #Set Gauges Y Coordinate On Map
      
-    GAUGE_SWITCH    = 2          #Switch To Turn Gauge Off/On In Map
+    GAUGE_SWITCH    = 100          #Switch To Turn Gauge Off/On In Map
      
     GAUGE_IN_BATTLE = false       #Show Gauge In Battle? True or False
      
@@ -344,7 +344,7 @@ class Window_EuphoriaHUD < Window_Base
    
   def refresh
     self.contents.clear
-    draw_actor_gauge($game_party.leader, Euphoria::Custom_Gauge::GAUGE_MAP_X, Euphoria::Custom_Gauge::GAUGE_MAP_Y, width = 120)
+    draw_actor_gauge($game_party.leader, Euphoria::Custom_Gauge::GAUGE_MAP_X, Euphoria::Custom_Gauge::GAUGE_MAP_Y, width = 140)
   end
  
 end

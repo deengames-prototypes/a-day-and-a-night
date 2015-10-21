@@ -6,7 +6,9 @@ require 'Scripts/mods/advanced_game_time'
 require 'Scripts/mods/euphoria_custom_gauge'  
 
 module ADAAN
-  POINTS = {:fed_homeless => 10}
+  POINTS = {
+    :fed_homeless => 5, :broke_statue => 25
+  }
   
   def self.add_points(key)
     points = POINTS[key]
