@@ -3,7 +3,8 @@ API_ROOT = 'Scripts/vx-ace-api'
 require 'Scripts/vx-ace-api/vx_ace_api'
 
 require 'Scripts/mods/advanced_game_time'
-require 'Scripts/mods/euphoria_custom_gauge'  
+require 'Scripts/utils/custom_save_system'
+require 'Scripts/utils/points_system'  
 
 module ADAAN
   POINTS = {
@@ -12,7 +13,7 @@ module ADAAN
   
   def self.add_points(key)
     points = POINTS[key]
-    $game_actors[1].add_gauge(points)
+    PointsSystem.add_points(key, points)
   end
   
   def self.chop_tree
