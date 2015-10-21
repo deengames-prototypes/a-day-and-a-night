@@ -26,5 +26,6 @@ module ADAAN
     end
 
     RPG::SE.new('Knock', 100, 80 + rand(40)).play
+    PointsSystem.add_points('Chopped down tree', -1)
   end  
 end
