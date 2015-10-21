@@ -84,7 +84,7 @@ NOBATTLETIME = false
 #Clock is shown
 USECLOCK = true
 #Set to true to have the clock show up in the menu!
-USECLOCK_MENU = false
+USECLOCK_MENU = true
 #Set the format for the clock both in and out of menu
 #1. hh:mm am/pm
 #2. Sun dd hh:mm am/pm
@@ -108,9 +108,8 @@ CLOCK_TOGGLE = nil
 #Finetune the width of the clock window here:
 CLOCK_WIDTH = 128
 #X and Y position of clock
-CUSTOM_PADDING = 16
-CLOCK_X = Graphics.width - CLOCK_WIDTH/2 + CUSTOM_PADDING
-CLOCK_Y = Graphics.height - 32 + CUSTOM_PADDING
+CLOCK_X = Graphics.width - CLOCK_WIDTH - 8
+CLOCK_Y = 8
 #Whether or not those little dots on the clock blink
 USE_BLINK = true
 #The speed at which they blink
@@ -142,6 +141,10 @@ BATTLE_TINT = false
  
 #Time it takes for a second (or minute) to pass, in frames by default
 #(Frame rate is 60 frames per second)
+###
+# 15h (900m) of game time in 30 minutes of real-time
+# 1 second of real time = 2 seconds of game time
+# That gives us 1800 seconds of real time, or ~30 minutes
 DEFAULT_TIMELAPSE = 120
 #Variable ID containing the current speed of time!
 TIMELAPSE_VARIABLE = 0
