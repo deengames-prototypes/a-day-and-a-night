@@ -9,7 +9,10 @@ require 'Scripts/mods/global_common_events'
 
 module ADAAN
   POINTS = {
-    :fed_homeless => 5, :broke_statue => 25
+    # Town map
+    :fed_homeless => 5,
+    # Masjid map
+    :broke_statue => 25, :annoyed_student => -5, :listened_to_tafseer => 15
   }
   
   # Game ends automagically at 8pm
@@ -37,6 +40,7 @@ module ADAAN
     if GameTime.hour? == GAME_OVER[:hour] && GameTime.min? == GAME_OVER[:minute]
       i = Game_Interpreter::instance
       i.show_message '\N[1] \{UGH!\|They got me!'
+      i.show_message "Final score:\n\\{\\{#{PointsSystem.total_points} points!"
       i.game_over
     end
   end
