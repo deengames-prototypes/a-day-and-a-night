@@ -10,9 +10,9 @@ require 'Scripts/mods/global_common_events'
 module ADAAN
   POINTS = {
     # Town map
-    :fed_homeless => 5,
+    :fed_homeless => 10,
     # Masjid map
-    :broke_statue => 25, :annoyed_student => -5, :listened_to_tafseer => 15
+    :broke_statue => 40, :annoyed_student => -10, :listened_to_tafseer => 25, :paid_innkeeper => 10
   }
   
   # Game ends automagically at 8pm
