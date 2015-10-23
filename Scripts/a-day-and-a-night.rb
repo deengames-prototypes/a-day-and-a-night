@@ -6,9 +6,12 @@ require 'Scripts/mods/advanced_game_time'
 require 'Scripts/utils/custom_save_system'
 require 'Scripts/utils/points_system'  
 require 'Scripts/mods/global_common_events'
+require 'Scripts/mods/ace_message_system'
 
 module ADAAN
   POINTS = {
+    # Inn mapp
+    :break_inn_door => -15,
     # Town map
     :fed_homeless => 10,
     # Masjid map
