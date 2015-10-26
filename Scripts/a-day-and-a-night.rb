@@ -20,6 +20,7 @@ module ADAAN
   
   # Game ends automagically at 8pm
   GAME_OVER = {:hour => 20, :minute => 0}
+  DAUGHTER_DIES = {:hour => 18, :minute => 15 + rand(15)}
   
   def self.add_points(key)
     points = POINTS[key]
@@ -36,7 +37,7 @@ module ADAAN
   end
   
   def self.countdown_to_game_over
-    if GameTime.hour? == GAME_OVER[:hour] && GameTime.min? >= GAME_OVER[:minute]
+    if after_time?(GAME_OVER[:hour], GAME_OVER[:minute])
       i = Game_Interpreter::instance
       i.show_message '\N[1] \{UGH!\|They got me!'
       i.show_message "Final score:\n\\{\\{#{PointsSystem.total_points} points!"
@@ -44,7 +45,16 @@ module ADAAN
     end
   end
   
+  def self.is_daughter_dead?    
+    return after_time?(DAUGHTER_DIES[:hour], DAUGHTER_DIES[:minute])
+  end
+  
   private
+  
+  def self.after_time?(hour, minute)
+    return (GameTime.hour? > hour) ||
+      (GameTime.hour? == hour && GameTime.min? >= minute)
+  end
   
   # pitch variance of 20 => 80-120
   # [min_times, max_times)
