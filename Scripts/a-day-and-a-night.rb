@@ -7,6 +7,7 @@ require 'Scripts/utils/custom_save_system'
 require 'Scripts/utils/points_system'  
 require 'Scripts/mods/global_common_events'
 require 'Scripts/mods/ace_message_system'
+require 'Scripts/utils/script_event_page_conditions'
 
 module ADAAN
   POINTS = {
